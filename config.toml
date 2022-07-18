@@ -1,0 +1,37 @@
+baseURL = 'https://gfgm.net/'
+languageCode = 'en-us'
+title = 'GFGM'
+theme = "ananke"
+
+[permalinks]
+    post = "/:year/:month/:filename"
+
+[taxonomies]
+    tag = "tags"
+    categories = "categories"
+    archive = "archives"
+    author = "authors"
+
+[[menu.social]]
+  icon = "github"
+  name = "My Github"
+  url = "https://github.com/siteexp"
+  pre = "<i class='fab fa-github'></i>"
+
+
+[[menu.main]]
+  name = "Posts"
+  url = "/post"
+
+[[menu.footer]]
+  name = "Impressum"
+  url = "/impressum"
+
+[[menu.footer]]
+  name = "About"
+  url = "/bbout"
+
+[[menu.footer]]
+  name = "Privacy"
+  url = "/privacy"
+

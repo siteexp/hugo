@@ -1,0 +1,11 @@
+<footer class="footer">
+    <div class="container">
+        <div class="columns has-text-centered">
+           <ul class="footer-ul">
+            {{ range .Site.Menus.footer }}          
+               <li class="footer-li"> <a href="{{ .URL }}" class="">{{ .Name }}</a> </li>
+            {{ end }}
+            </ul>
+        </div>
+    </div>
+</footer>

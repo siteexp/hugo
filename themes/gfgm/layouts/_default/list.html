@@ -1,0 +1,23 @@
+{{ define "main" }}
+    {{ range .Pages }}
+    <div class="wsp">
+     <div class="left">
+       <div class="card">
+         <div class="cardtoptitle">
+            {{ .Title }}
+         </div>
+         <div class="cardtopsubtitle">
+          <span class="heading"> {{ partial "author.html" . }}| <time>{{ .PublishDate.Format "January 2, 2006"}}</time></span>
+         </div>
+         <div class="cardsummary">
+            {{ .Summary }}
+         </div>
+       </div>       
+     </div>
+      <div class="right">
+       {{ partial "sidebar_right.html" . }}
+      </div>
+    </div>
+    {{ end }}
+
+{{ end }}
