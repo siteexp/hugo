@@ -1,0 +1,19 @@
+<footer>
+<ul>
+        {{ range .Site.Menus.footer }}
+<li>
+        <a class="nav-link" href="{{ .URL }}">
+        {{ if .Pre }}
+        {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
+        {{ $icon }}
+        {{ end }}
+        {{ $text := print .Name | safeHTML }}
+        {{ $text }}
+        </a>
+</li>
+
+
+        {{ end }}
+<li style="display: block; color: white;text-align: center; padding: 14px 16px; float: right;">Copyright (c) {{ now.Format "2006"}} John Doe</li>
+</ul>
+</footer>

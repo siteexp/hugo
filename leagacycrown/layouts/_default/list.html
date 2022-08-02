@@ -1,0 +1,21 @@
+
+{{ define "main" }}
+{{ range (.Paginator 2).Pages }}
+{{- $image := resources.Get .Params.coverImage -}}
+<div class="card" style="width: 80%; margin-left: 5px ">
+    <div  class="card-img-top">
+      <img src="test.jpg" alt="">
+       {{ $image }}
+    </div>
+<div class="card-body">
+<h5 class="card-title">{{ .Title }}</h5>
+<p class="card-text">
+    {{ partial "metadata.html" . }}
+        <p>{{ .Summary }}</p>
+</p>
+<a href="{{ .RelPermalink }}" class="btn btn-primary">Read More</a>
+</div>
+</div>
+{{ end }}
+{{ template "_internal/pagination.html" . }}
+{{ end }}
