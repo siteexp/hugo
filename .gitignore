@@ -1,2 +1,4 @@
 .gitmodules
 .hugo_build.lock
+.gitignore
+.hugo_build.lock
